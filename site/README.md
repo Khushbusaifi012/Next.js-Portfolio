@@ -13,8 +13,6 @@ A modern, premium single-page portfolio built with **Next.js**, **React**, and *
 - **Rich experience cards** — Timeline layout, company logos, and nested project blocks where applicable
 - **Skills workspace** — Grouped “Tools & languages” grids with brand icons (Simple Icons CDN + fallbacks)
 - **Single-page flow** — Navbar anchor links with scroll offset; footer contact strip
-- **Polished interactions** — Hover states, subtle shadows, `next/image` for optimised assets
-
 ---
 
 ## Sections
@@ -102,15 +100,5 @@ site/
 ├── tsconfig.json
 └── next.config.ts
 ```
-
----
-
-## Customisation
-
-- **Copy & roles** — Edit `src/data/resume.ts` (`personal`, `about`, `experience`, `skillGroups`, `projects`, `education`).
-- **Images** — Place files under `public/` and reference paths like `/hero.jpg`, `/about-photo.jpg`, or set `logoSrc` on experience entries.
-- **Resume download** — Set `resumeDownloadUrl` in `personal` when you host a PDF (or wire `DownloadResumeButton` to your file).
-
----
 
 Built with care using **Next.js**, **React**, and **Tailwind CSS**.
