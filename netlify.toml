@@ -1,10 +1,10 @@
-# Monorepo: `base` = app folder. `publish` must be a *different* path — use repo-relative
-# `site/.next` so Netlify never resolves publish === base (both /repo/site).
+# `base` = app folder. `publish` must be path *inside* base (not `site/.next` or
+# Netlify resolves to /repo/site/site/.next). Use `.next` only.
 
 [build]
   base = "site"
   command = "npm run build"
-  publish = "site/.next"
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
