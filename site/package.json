@@ -2,6 +2,9 @@
   "name": "bhupinder-portfolio",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "zod": "3.25.76"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
