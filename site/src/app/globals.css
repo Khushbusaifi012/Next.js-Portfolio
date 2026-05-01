@@ -14,22 +14,6 @@
   --glow-2: color-mix(in oklab, #38bdf8 28%, transparent);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #f6f8fc;
-    --surface: #ffffff;
-    --elevated: #eef2fa;
-    --border: color-mix(in oklab, #0f172a 12%, transparent);
-    --text: #0b1220;
-    --muted: #556176;
-    --accent: #0d9488;
-    --accent-dim: #0f766e;
-    --accent-foreground: #f0fdf9;
-    --glow-1: color-mix(in oklab, var(--accent) 25%, transparent);
-    --glow-2: color-mix(in oklab, #0ea5e9 18%, transparent);
-  }
-}
-
 @theme inline {
   --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
