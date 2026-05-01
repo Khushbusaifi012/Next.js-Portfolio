@@ -1,0 +1,12 @@
+# Monorepo: app lives in `site/`. Defines base here so Netlify UI can leave
+# "Publish directory" empty (UI auto-fills publish=base when you type base — breaks Next plugin).
+
+[build]
+  base = "site"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
