@@ -7,11 +7,9 @@ import {
   ShieldHalf,
 } from "lucide-react";
 
-/** Pinned icons: some brands were dropped from cdn.simpleicons.org; npm package still ships SVGs. */
 const SIMPLE_ICONS_LEGACY = "https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons";
 
 export type SkillVisualMeta = {
-  /** Simple Icons slug for https://cdn.simpleicons.org/:slug */
   slug?: string;
   iconSrc?: string;
   Fallback?: LucideIcon;

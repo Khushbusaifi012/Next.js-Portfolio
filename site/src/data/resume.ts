@@ -11,7 +11,6 @@
   ],
   totalExperience: "4+ years",
   resumeDownloadUrl: "" as string,
-  /** Hero column image under `public/` */
   heroImageSrc: "/hero.jpg",
   social: {
     linkedin: "https://www.linkedin.com/in/bhupinder-kumar-sde/",
@@ -20,7 +19,6 @@
   },
 } as const;
 
-/** Long-form intro for the About section. Set `photoSrc` to `/about-photo.jpg` etc. after adding a file under `public/`. */
 export const about = {
   photoSrc: "/about-photo.jpg",
   paragraphs: [
@@ -32,7 +30,6 @@ export const about = {
 
 export type ExperienceItem = {
   emoji: string;
-  /** Optional logo under `public/`; when set, shown beside the role instead of `emoji`. */
   logoSrc?: string;
   role: string;
   company: string;
