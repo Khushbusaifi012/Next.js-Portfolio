@@ -1,4 +1,4 @@
-# Bhupinder Kumar — Developer Portfolio
+# Bhupinder Kumar Portfolio
 
 A modern, premium single-page portfolio built with **Next.js**, **React**, and **Tailwind CSS**. Dark-first UI with teal accents, soft gradients, glass-style elevated surfaces, and scroll-driven reveals—optimized for readability and a strong first impression.
 
