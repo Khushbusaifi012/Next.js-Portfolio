@@ -1,4 +1,4 @@
-﻿export const personal = {
+export const personal = {
   name: "Bhupinder Kumar",
   title: "Python Full-Stack Developer",
   tagline:
@@ -10,7 +10,8 @@
     { iso2: "AE", number: "+971 505668351" },
   ],
   totalExperience: "4+ years",
-  resumeDownloadUrl: "" as string,
+  resumeDownloadUrl:
+    "https://drive.google.com/file/d/1p329uEj-EAt3W977hphebiHG_CW1nuqG/view?usp=sharing",
   heroImageSrc: "/hero.jpg",
   social: {
     linkedin: "https://www.linkedin.com/in/bhupinder-kumar-sde/",
@@ -186,6 +187,18 @@ export const skillGroups = [
 
 export const projects = [
   {
+    emoji: "📈",
+    name: "Trading Automation Project - TradingView X cTrader",
+    tech: ["Python", "FastAPI", "cTrader Open API", "AWS", "Cloudflare"],
+    bullets: [
+      "Built a secure trading automation bridge that receives TradingView webhook signals and executes trades on cTrader (FXPro).",
+      "Implemented signal-to-account routing and optional symbol mapping for broker-specific execution behavior.",
+      "Developed APIs for order placement, position management, stop-loss/take-profit updates, and trade history retrieval.",
+      "Deployed and operated the solution on AWS with Cloudflare edge security, ensuring reliable production execution.",
+    ],
+    href: "https://github.com/bhupi080/ctrader",
+  },
+  {
     emoji: "🧩",
     name: "Sudoku Solver using Boolean Satisfiability (SAT)",
     tech: ["Python", "PySAT", "Boolean Satisfiability Problem (SAT)"],
@@ -196,26 +209,5 @@ export const projects = [
       "Automated the entire process — from puzzle input to SAT encoding and decoded Sudoku output.",
     ],
     href: "https://github.com/bhupi080/sudoku-solver_pysat",
-  },
-  {
-    emoji: "🤝",
-    name: "Courses Info Access via QR Code (Volunteer NGO)",
-    tech: ["Python", "HTML", "CSS"],
-    description: "Courses info page accessible via QR codes to simplify explanations for trainees.",
-    href: "https://github.com/bhupi080/courses",
-  },
-  {
-    emoji: "📦",
-    name: "Product Tracking Dashboard",
-    tech: ["React.js", "JavaScript", "MySQL"],
-    description: "Login dashboard for courier-style product tracking with real-time updates.",
-    href: "https://github.com/bhupi080/reactwebapp",
-  },
-  {
-    emoji: "⌨️",
-    name: "Employee Management (CLI)",
-    tech: ["C"],
-    description: "1800+ lines C project implementing CRUD to explore advanced C concepts.",
-    href: "https://github.com/bhupi080/CProject/blob/main/login.c",
   },
 ];
