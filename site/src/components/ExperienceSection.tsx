@@ -9,32 +9,42 @@ function TimelineCard({ job }: { job: ExperienceItem }) {
       <div className="absolute left-[-5px] top-2 hidden h-2.5 w-2.5 rounded-full border-2 border-[var(--accent)] bg-[var(--bg)] shadow-[0_0_12px_color-mix(in_oklab,var(--accent)_65%,transparent)] sm:block md:left-[7.4rem]" />
 
       <div className="md:ml-[9.5rem]">
-        <div className="rounded-2xl border border-[color-mix(in_oklab,var(--accent-dim)_42%,var(--border))] bg-[color-mix(in_oklab,var(--elevated)_88%,transparent)] p-5 shadow-[0_0_40px_-16px_color-mix(in_oklab,var(--accent)_22%,transparent)] transition-[border-color,box-shadow] sm:p-6 group-hover:border-[color-mix(in_oklab,var(--accent-dim)_58%,var(--border))] group-hover:shadow-[0_0_48px_-14px_color-mix(in_oklab,var(--accent)_28%,transparent)]">
-          <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between md:block md:space-y-1">
-            <div>
-              <h3 className="flex flex-wrap items-center gap-2 font-[family-name:var(--font-display)] text-lg font-bold text-[var(--text)] sm:text-xl">
-                {job.logoSrc ? (
-                  <span className="relative inline-flex h-7 max-h-8 shrink-0 items-center sm:h-8">
-                    <Image
-                      src={job.logoSrc}
-                      alt={`${job.company} logo`}
-                      width={140}
-                      height={38}
-                      className="h-6 w-auto max-h-7 max-w-[8.25rem] object-contain object-left sm:h-7 sm:max-h-8 sm:max-w-[9.5rem]"
-                    />
-                  </span>
-                ) : (
-                  <span className="select-none text-2xl leading-none" aria-hidden title="Role">
-                    {job.emoji}
-                  </span>
-                )}
-                <span>{job.role}</span>
-              </h3>
-              <p className="text-sm font-medium text-[var(--muted)]">
-                {job.company} · {job.location}
-              </p>
+        <div className="rounded-2xl border border-[color-mix(in_oklab,var(--accent-dim)_42%,var(--border))] bg-[color-mix(in_oklab,var(--elevated)_88%,transparent)] p-5 pt-7 pb-6 shadow-[0_0_40px_-16px_color-mix(in_oklab,var(--accent)_22%,transparent)] transition-[border-color,box-shadow] sm:p-6 sm:pt-9 sm:pb-7 group-hover:border-[color-mix(in_oklab,var(--accent-dim)_58%,var(--border))] group-hover:shadow-[0_0_48px_-14px_color-mix(in_oklab,var(--accent)_28%,transparent)]">
+          <div className="mb-5">
+            <div className="flex items-center gap-4 sm:gap-5">
+              <div className="min-w-0 flex-1">
+                <h3 className="font-[family-name:var(--font-display)] text-lg font-bold text-[var(--text)] sm:text-xl">
+                  {job.role}
+                </h3>
+                <p className="mt-1 text-sm font-medium text-[var(--accent)]">{job.company}</p>
+                <p className="mt-0.5 text-sm text-[var(--muted)]">{job.location}</p>
+                <p className="mt-2 font-[family-name:var(--font-mono)] text-xs uppercase tracking-wider text-[var(--accent-dim)] md:hidden">
+                  {job.start} — {job.end}
+                </p>
+              </div>
+              {job.logoSrc ? (
+                <div
+                  className="relative h-[3.75rem] w-[3.75rem] shrink-0 overflow-hidden rounded-xl border border-[color-mix(in_oklab,var(--accent-dim)_35%,var(--border))] bg-[color-mix(in_oklab,var(--bg)_40%,var(--elevated))] shadow-[inset_0_1px_0_color-mix(in_oklab,var(--text)_06%,transparent)] sm:h-16 sm:w-16"
+                >
+                  <Image
+                    src={job.logoSrc}
+                    alt={`${job.company} logo`}
+                    width={64}
+                    height={64}
+                    className="h-full w-full object-contain object-center p-1.5 sm:p-2"
+                  />
+                </div>
+              ) : (
+                <div
+                  className="flex h-[3.75rem] w-[3.75rem] shrink-0 items-center justify-center rounded-xl border border-[color-mix(in_oklab,var(--accent-dim)_35%,var(--border))] bg-[color-mix(in_oklab,var(--bg)_40%,var(--elevated))] text-2xl leading-none sm:h-16 sm:w-16"
+                  aria-hidden
+                  title="Role"
+                >
+                  {job.emoji}
+                </div>
+              )}
             </div>
-            <p className="font-[family-name:var(--font-mono)] text-xs uppercase tracking-wider text-[var(--accent-dim)] md:absolute md:left-0 md:top-1 md:w-28 md:text-right md:text-[0.65rem]">
+            <p className="pointer-events-none hidden font-[family-name:var(--font-mono)] text-xs uppercase tracking-wider text-[var(--accent-dim)] md:absolute md:left-0 md:top-9 md:block md:w-28 md:text-right md:text-[0.65rem]">
               {job.start} — {job.end}
             </p>
           </div>
