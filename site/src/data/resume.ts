@@ -1,4 +1,4 @@
-export const personal = {
+﻿export const personal = {
   name: "Bhupinder Kumar",
   title: "Python Full-Stack Developer",
   tagline:
@@ -39,6 +39,15 @@ export type ExperienceItem = {
   end: string;
   highlights: string[];
   projects?: { name: string; bullets: string[] }[];
+};
+
+export type PortfolioProject = {
+  emoji: string;
+  name: string;
+  tech: string[];
+  bullets?: string[];
+  description?: string;
+  href?: string;
 };
 
 export const experience: ExperienceItem[] = [
@@ -185,7 +194,7 @@ export const skillGroups = [
   },
 ];
 
-export const projects = [
+export const projects: PortfolioProject[] = [
   {
     emoji: "📈",
     name: "Trading Automation Project - TradingView X cTrader",
